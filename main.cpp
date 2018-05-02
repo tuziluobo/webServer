@@ -2,8 +2,12 @@
 #include <stdlib.h>
 #include <errno.h>
 #include <limits.h>
+#include "string"
+#include <stdio.h>      /* for printf() and fprintf() */
+#include <stdlib.h>
+#include <assert.h>
+#include <cstring>
 #include "httpd.h"
-
 using namespace std;
 
 void usage(char * argv0)

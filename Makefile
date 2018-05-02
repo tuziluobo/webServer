@@ -1,9 +1,8 @@
-
 CC=g++
-CFLAGS=-ggdb -Wall -Wextra -pedantic -Werror
-DEPS = httpd.h
-SRCS = httpd.cpp
-MAIN_SRCS = main.c $(SRCS)
+CFLAGS=-ggdb -Wall -pedantic -std=c++11 -Werror -Wextra
+DEPS = httpd.h CalcFramer.hpp CalcParser.hpp 
+SRCS = httpd.cpp HandleTCPClient.cpp CalcFramer.cpp CalcParser.cpp CreateTCPServerSocket.cpp AcceptTCPConnection.cpp
+MAIN_SRCS = main.cpp $(SRCS)
 MAIN_OBJS = $(MAIN_SRCS:.c=.o)
 
 default: httpd
